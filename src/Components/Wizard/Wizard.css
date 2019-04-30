@@ -58,12 +58,25 @@ input{
     width: 100px;
 }
 
-.Complete{
+.Step, .Complete{
     position: absolute;
     right: 0;
     bottom: 10%;
-    background: #8AEA92;
     border: none;
     font-size: 20px;
     padding:1%;
+}
+
+.Previous{
+    right: 120px;
+}
+
+.Step{
+    background: #3B5249;
+    color: whitesmoke;
+}
+
+.Complete{
+    background: #8AEA92;
+    
 }

@@ -13,7 +13,7 @@ function App() {
         <section>
           <Switch>
             <Route exact path="/" component={Dashboard} />
-            <Route exact path="/wizard" component={Wizard} />
+            <Route path="/wizard" component={Wizard} />
           </Switch>
         </section>
       </main>

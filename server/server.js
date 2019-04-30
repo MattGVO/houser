@@ -2,17 +2,18 @@ const express = require('express')
 const massive = require('massive')
 const ctrl = require('./controller')
 require('dotenv').config()
-
-const { SERVER_PORT, CONNECTION_STRING } = process.env
-
 const app = express()
+
+const {SERVER_PORT, CONNECTION_STRING} = process.env
 
 app.use(express.json())
 
+app.get('/api/houses',ctrl.getAllHouses)
+
 massive(CONNECTION_STRING).then( db =>{
-    app.set('db',db);
+    app.set('db', db)
     app.listen(SERVER_PORT, () =>(
-        `Server Listening On Port: ${SERVER_PORT}`
+        console.log(`listening on port ${SERVER_PORT}`)
     ))
 })
 
