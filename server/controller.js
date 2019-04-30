@@ -12,7 +12,15 @@ module.exports={
         let db = req.app.get('db');
         let houses = await db.add_house([])
     },
-    deleteHouse: (req,res) => {
+    deleteHouse: async (req,res) => {
+        let {id} = req.params
+        console.log(id)
         let db = req.app.get('db');
+        let houses = await db.delete_house([id])
+        if(houses){
+            res.status(200).send(houses)
+        }else{
+            res.sendStatus(500)
+        }
     }
 }

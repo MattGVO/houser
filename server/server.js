@@ -9,6 +9,8 @@ const {SERVER_PORT, CONNECTION_STRING} = process.env
 app.use(express.json())
 
 app.get('/api/houses',ctrl.getAllHouses)
+app.post('/api/houses', ctrl.addHouse)
+app.delete('/api/houses/:id', ctrl.deleteHouse)
 
 massive(CONNECTION_STRING).then( db =>{
     app.set('db', db)

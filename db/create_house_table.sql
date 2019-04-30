@@ -55,5 +55,5 @@ CREATE TABLE houses (
 --     'San Francisco',
 --     'CA',
 --     1987,
---     'W1siZiIsInVwbG9hZHMvcGxhY2VfaW1hZ2VzLzY5N2ZkZTY5ZDI1NWU3ZTgxN180NjQzMzk2NjUzXzMxYTAzYjEyMGZfei5qcGciXSxbInAiLCJ0aHVtYiIsIngzOTA'
+--     'https://hoodline.imgix.net/uploads/story/image/25350/Tanner-family-Victorian-1882-Girard-San-Francisco-Full-House.jpg?auto=format'
 -- );

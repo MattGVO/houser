@@ -15,10 +15,18 @@ export default class Dashboard extends Component {
             houses: res.data
         })
     }
+
+     deleteHouse = async e =>{
+        let {id} = e.target
+        let res = await axios.delete(`/api/houses/${id}`)
+        this.setState({
+            houses: res.data
+        })
+    }
     
     render(){
         let houses = this.state.houses.map( val =>(
-            <House key={val.id} house={val} />
+            <House deleteHouse={this.deleteHouse} key={val.id} house={val} />
         ))
         return(
             <div class="Dashboard">

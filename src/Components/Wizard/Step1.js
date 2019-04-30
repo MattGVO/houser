@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'
+import store, { STEP_1 } from '../../ducks/store'
+
 import "./Wizard.css";
 
 export default class Step1 extends Component {
@@ -18,6 +20,13 @@ export default class Step1 extends Component {
           [name]:value
       })
   }
+
+  next = () =>{
+    store.dispatch({
+      type: STEP_1,
+      payload: this.state
+    })
+  }
     
   render() {
     return (
@@ -28,7 +37,7 @@ export default class Step1 extends Component {
         </div>
         <div className="Input">
           <p className="Label">Address</p>
-          <input onChange={this.handleChange} name="address" maxLength={100} className="Address" type="text" />
+          <input onChange={this.handleChange} name="address" maxLength={100} className="Long" type="text" />
         </div>
         <div className="Input">
           <p className="Label">City</p>
@@ -45,7 +54,7 @@ export default class Step1 extends Component {
           </div>
         </div>
         <Link to="/wizard/step2">
-          <button className="Step">Next Step</button>
+          <button onClick={this.next} className="Step">Next Step</button>
         </Link>
       </div>
     );
