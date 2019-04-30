@@ -1,0 +1,28 @@
+.Dashboard{
+    width: 90%
+}
+
+.Dashboard>h3{
+    margin: 20px;
+}
+
+.Dash-Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3B5249;
+    border-bottom: solid 1px
+}
+
+.Dash-Header h1{
+    font-size: 40px;
+}
+
+.Dash-Header button{
+    border: none;
+    background: #8AEA92;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+}

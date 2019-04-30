@@ -1,0 +1,23 @@
+header{
+    display: flex;
+    align-items: center;
+    background: #519872;
+    color: whitesmoke;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 75px
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    position: absolute;
+    left:400px
+}
+header div h1{
+    margin-left: 10px;
+    font-weight: 700;
+}

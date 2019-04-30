@@ -1,0 +1,20 @@
+.House{
+    background: #DEDEDE;
+    width: 100%;
+    padding:  10px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.House p{
+    margin: 5px;
+}
+
+.X{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
