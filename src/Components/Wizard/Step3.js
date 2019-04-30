@@ -17,13 +17,13 @@ export default class Step3 extends Component {
       })
   }
 
-  complete = () =>{
+  complete = async () =>{
     store.dispatch({
       type: STEP_3,
       payload: this.state
     })
-    let 
-    axios
+    let house = store.getState()
+    await axios.post('/api/houses', house)
   }
     
   render() {

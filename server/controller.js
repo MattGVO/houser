@@ -9,8 +9,11 @@ module.exports={
         }
     },
     addHouse: async (req,res) => {
+        console.log(req.body)
+        let {propertyName, address,city,state,zip,img,mortgage,rent} = req.body
         let db = req.app.get('db');
-        let houses = await db.add_house([])
+        let houses = await db.add_house([propertyName, address,city,state,zip,img,mortgage,rent])
+        res.sendStatus(200)
     },
     deleteHouse: async (req,res) => {
         let {id} = req.params
